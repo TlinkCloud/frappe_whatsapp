@@ -1,0 +1,1320 @@
+# Arabic translations for frappe_whatsapp.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the frappe_whatsapp
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: frappe_whatsapp VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-29 11:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: TlinkCloud\n"
+"Language: ar\n"
+"Language-Team: Arabic\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid " Attach Document Print"
+msgstr " إرفاق طباعة المستند"
+
+#, python-brace-format
+msgid "${r.message} recipients imported successfully"
+msgstr "تم استيراد ${r.message} من المستلمين بنجاح"
+
+msgid "5.1"
+msgstr "5.1"
+
+msgid "6.0"
+msgstr "6.0"
+
+msgid "6.1"
+msgstr "6.1"
+
+msgid "6.2"
+msgstr "6.2"
+
+msgid "6.3"
+msgstr "6.3"
+
+msgid "7.0"
+msgstr "7.0"
+
+msgid "7.1"
+msgstr "7.1"
+
+msgid "7.2"
+msgstr "7.2"
+
+msgid "7.3"
+msgstr "7.3"
+
+#, python-brace-format
+msgid ""
+"<pre><code>doc.grand_total &gt; 0</code></pre>\n"
+"\n"
+"<p>Conditions should be written in simple Python. Please use properties "
+"available in the form only.</p>\n"
+"\n"
+"<p>Example: </p><pre><code>doc.status=='Enabled' </code></pre><p></p>\n"
+"\n"
+"<p> For scheduler events you can use follwing methods</p>\n"
+"<p>Allowed functions: </p><ul>\n"
+"<li>frappe.db.get_value</li>\n"
+"<li>frappe.db.get_list</li>\n"
+"<li>frappe.session</li>\n"
+"<li>frappe.utils.now_datetime</li>\n"
+"<li>frappe.utils.get_datetime</li>\n"
+"<li>frappe.utils.add_to_date</li>\n"
+"<li>frappe.utils.now</li>\n"
+"</ul>\n"
+"<p>Example: </p><pre><code>doc.creation &gt; "
+"frappe.utils.add_to_date(frappe.utils.now_datetime(\n"
+"), days=-5, as_string=True, as_datetime=True) </code></pre><p></p>\n"
+"\n"
+"<p>\n"
+"\t<strong>For scheduled events, use </strong>\n"
+"<br>\n"
+"1. Simple template sending, without parameters, just send a template\n"
+"</p><pre><code class=\"language-python\">\n"
+"doc.set(\"_contact_list\", [\"919123456789\"])\n"
+"</code>\n"
+"</pre>\n"
+"\n"
+"2. Message based on doctype with parameters\n"
+"<pre><code class=\"language-python\">\n"
+"quotation_list = frappe.get_list(\"Quotation\", {\"name\": \"VEN-"
+"COT-24-29806\", \"custom_whatsapp_notify\": 0})\n"
+"for qo in quotation_list:\n"
+"\tdata_list.append({\n"
+"\t\t\"name\": qo.name,\n"
+"\t\t\"phone_no\": \"5548996436821\",\n"
+"\t})\n"
+"doc.set(\"_data_list\", data_list)\n"
+"</code>\n"
+"</pre>\n"
+"\n"
+"<p></p> "
+msgstr ""
+"<pre><code>doc.grand_total &gt; 0</code></pre>\n"
+"\n"
+"<p>يجب كتابة الشروط بلغة Python بسيطة. يرجى استخدام الخصائص المتاحة في "
+"النموذج فقط.</p>\n"
+"\n"
+"<p>مثال: </p><pre><code>doc.status=='Enabled' </code></pre><p></p>\n"
+"\n"
+"<p> لأحداث المجدول يمكنك استخدام الدوال التالية</p>\n"
+"<p>الدوال المسموح بها: </p><ul>\n"
+"<li>frappe.db.get_value</li>\n"
+"<li>frappe.db.get_list</li>\n"
+"<li>frappe.session</li>\n"
+"<li>frappe.utils.now_datetime</li>\n"
+"<li>frappe.utils.get_datetime</li>\n"
+"<li>frappe.utils.add_to_date</li>\n"
+"<li>frappe.utils.now</li>\n"
+"</ul>\n"
+"<p>مثال: </p><pre><code>doc.creation &gt; "
+"frappe.utils.add_to_date(frappe.utils.now_datetime(\n"
+"), days=-5, as_string=True, as_datetime=True) </code></pre><p></p>\n"
+"\n"
+"<p>\n"
+"\t<strong>للأحداث المجدولة، استخدم </strong>\n"
+"<br>\n"
+"1. إرسال قالب بسيط بدون معاملات، أي إرسال القالب فقط\n"
+"</p><pre><code class=\"language-python\">\n"
+"doc.set(\"_contact_list\", [\"919123456789\"])\n"
+"</code>\n"
+"</pre>\n"
+"\n"
+"2. رسالة مبنية على نوع المستند مع معاملات\n"
+"<pre><code class=\"language-python\">\n"
+"quotation_list = frappe.get_list(\"Quotation\", {\"name\": \"VEN-"
+"COT-24-29806\", \"custom_whatsapp_notify\": 0})\n"
+"for qo in quotation_list:\n"
+"\tdata_list.append({\n"
+"\t\t\"name\": qo.name,\n"
+"\t\t\"phone_no\": \"5548996436821\",\n"
+"\t})\n"
+"doc.set(\"_data_list\", data_list)\n"
+"</code>\n"
+"</pre>\n"
+"\n"
+"<p></p> "
+
+msgid ""
+"A comma-separated list of Content IDs (also known as Retailer IDs) from your"
+" Meta Catalog. 7jz1ottjd2, oidpztf4vp etc."
+msgstr ""
+"قائمة مفصولة بفواصل لمعرّفات المحتوى (المعروفة أيضًا بمعرّفات التاجر) من "
+"كتالوج Meta الخاص بك، مثل 7jz1ottjd2 و oidpztf4vp."
+
+msgid "APPOINTMENT_BOOKING"
+msgstr "APPOINTMENT_BOOKING"
+
+msgid "AUTHENTICATION"
+msgstr "AUTHENTICATION"
+
+msgid "Access token is required to subscribe the app"
+msgstr "رمز الوصول مطلوب لاشتراك التطبيق"
+
+msgid "Action"
+msgstr "الإجراء"
+
+msgid "Add Test Recipient"
+msgstr "إضافة مستلم تجريبي"
+
+msgid "After Cancel"
+msgstr "بعد الإلغاء"
+
+msgid "After Save (Submitted Document)"
+msgstr "بعد الحفظ (مستند معتمد)"
+
+msgid "After Submit"
+msgstr "بعد الاعتماد"
+
+msgid "All recipients have valid numbers"
+msgstr "جميع المستلمين لديهم أرقام صالحة"
+
+msgid "Allow auto read receipt"
+msgstr "السماح بإشعار القراءة التلقائي"
+
+msgid "App ID"
+msgstr "App ID"
+
+msgid "App subscribed to webhooks"
+msgstr "تم اشتراك التطبيق في Webhooks"
+
+msgid ""
+"Are you sure you want to delete this flow from WhatsApp? This cannot be "
+"undone."
+msgstr "هل أنت متأكد من حذف هذا التدفق من واتساب؟ لا يمكن التراجع عن هذا الإجراء."
+
+msgid "Are you sure you want to deprecate this flow?"
+msgstr "هل أنت متأكد من إيقاف هذا التدفق؟"
+
+msgid "Are you sure you want to publish this flow? Published flows cannot be edited."
+msgstr "هل أنت متأكد من نشر هذا التدفق؟ لا يمكن تعديل التدفقات المنشورة."
+
+msgid "At least one recipient is required"
+msgstr "يلزم وجود مستلم واحد على الأقل"
+
+msgid "At least one recipient or a recipient list is required"
+msgstr "يلزم وجود مستلم واحد على الأقل أو قائمة مستلمين"
+
+msgid "At least one screen is required"
+msgstr "يلزم وجود شاشة واحدة على الأقل"
+
+msgid "At least one screen must be marked as terminal"
+msgstr "يجب تحديد شاشة واحدة على الأقل كشاشة نهائية"
+
+msgid "Attach from field"
+msgstr "إرفاق من حقل"
+
+msgid "Attach from field "
+msgstr "إرفاق من حقل "
+
+msgid "Attach media from doctype field"
+msgstr "إرفاق وسائط من حقل في نوع المستند"
+
+msgid "Auto-generated from screens configuration"
+msgstr "يُنشأ تلقائيًا من إعدادات الشاشات"
+
+msgid "Before Save (Submitted Document)"
+msgstr "قبل الحفظ (مستند معتمد)"
+
+msgid "Before Submit"
+msgstr "قبل الاعتماد"
+
+msgid "Blocked"
+msgstr "محظور"
+
+msgid "Body Param"
+msgstr "معامل النص"
+
+msgid "Bulk WhatsApp Message"
+msgstr "رسالة واتساب جماعية"
+
+msgid "Bulk WhatsApp Status"
+msgstr "حالة رسائل واتساب الجماعية"
+
+msgid "Business ID"
+msgstr "Business ID"
+
+msgid "Button Fields"
+msgstr "حقول الزر"
+
+msgid "Button Label"
+msgstr "تسمية الزر"
+
+msgid "Button Type"
+msgstr "نوع الزر"
+
+msgid "Button text shown to user to open the flow"
+msgstr "نص الزر الذي يظهر للمستخدم لفتح التدفق"
+
+msgid "Button text to open the flow"
+msgstr "نص زر فتح التدفق"
+
+msgid "Buttons"
+msgstr "الأزرار"
+
+msgid "CONTACT_US"
+msgstr "CONTACT_US"
+
+msgid "CUSTOMER_SUPPORT"
+msgstr "CUSTOMER_SUPPORT"
+
+msgid "Call Phone"
+msgstr "اتصال هاتفي"
+
+msgid "Call to Action"
+msgstr "دعوة لاتخاذ إجراء"
+
+msgid "Catalog"
+msgstr "الكتالوج"
+
+msgid "Check Progress"
+msgstr "التحقق من التقدم"
+
+msgid "Check Status"
+msgstr "التحقق من الحالة"
+
+msgid "CheckboxGroup"
+msgstr "CheckboxGroup"
+
+msgid "Checking flow status..."
+msgstr "جارٍ التحقق من حالة التدفق..."
+
+msgid "Common"
+msgstr "عام"
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Condition"
+msgstr "الشرط"
+
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+msgid "Conversation ID"
+msgstr "Conversation ID"
+
+msgid "Create on WhatsApp"
+msgstr "إنشاء على واتساب"
+
+msgid "Created On"
+msgstr "تاريخ الإنشاء"
+
+msgid "Creating flow on WhatsApp..."
+msgstr "جارٍ إنشاء التدفق على واتساب..."
+
+msgid "Custom attachment"
+msgstr "مرفق مخصص"
+
+msgid "DOCUMENT"
+msgstr "DOCUMENT"
+
+msgid "Daily"
+msgstr "يومي"
+
+msgid "Daily Long"
+msgstr "يومي (طويل)"
+
+msgid "Data Endpoint URI"
+msgstr "Data Endpoint URI"
+
+msgid "Data fields"
+msgstr "حقول البيانات"
+
+msgid "DatePicker"
+msgstr "DatePicker"
+
+msgid "Default Incoming Account"
+msgstr "حساب الوارد الافتراضي"
+
+msgid "Default Outgoing Account"
+msgstr "حساب الصادر الافتراضي"
+
+msgid "Default value for the field"
+msgstr "القيمة الافتراضية للحقل"
+
+msgid ""
+"Define fields for each screen. Set the Screen ID to match screens defined "
+"above."
+msgstr "حدد الحقول لكل شاشة، واجعل Screen ID مطابقًا للشاشات المحددة أعلاه."
+
+msgid "Delete from WhatsApp"
+msgstr "حذف من واتساب"
+
+msgid "Deleting flow..."
+msgstr "جارٍ حذف التدفق..."
+
+msgid "Deprecate"
+msgstr "إيقاف"
+
+msgid "Deprecated"
+msgstr "موقوف"
+
+msgid "Deprecating flow..."
+msgstr "جارٍ إيقاف التدفق..."
+
+msgid "DocType Event"
+msgstr "حدث نوع المستند"
+
+msgid "DocType to Import"
+msgstr "نوع المستند المراد استيراده"
+
+msgid "Draft"
+msgstr "مسودة"
+
+msgid "Dropdown"
+msgstr "قائمة منسدلة"
+
+#, python-brace-format
+msgid "Duplicate screen ID: {0}"
+msgstr "معرّف شاشة مكرر: {0}"
+
+msgid "Dynamic"
+msgstr "ديناميكي"
+
+#, python-brace-format
+msgid "Either {0} a file or add a {1} to send attachemt"
+msgstr "يرجى {0} ملف أو إضافة {1} لإرسال المرفق"
+
+msgid "EmbeddedLink"
+msgstr "EmbeddedLink"
+
+msgid "Enable MPM"
+msgstr "تفعيل MPM"
+
+msgid "Enabled"
+msgstr "مفعّل"
+
+msgid "Enables Multi-Product Message."
+msgstr "تفعيل الرسائل متعددة المنتجات."
+
+msgid "Enter fields in the right sequence as per the template parameters."
+msgstr "أدخل الحقول بالترتيب الصحيح وفقًا لمعاملات القالب."
+
+msgid ""
+"Enter phone number with country code (e.g., 919876543210). Must be a "
+"registered test number for draft flows."
+msgstr ""
+"أدخل رقم الهاتف مع رمز الدولة (مثل 919876543210). يجب أن يكون رقمًا تجريبيًا"
+" مسجلًا للتدفقات في وضع المسودة."
+
+msgid "Example URL"
+msgstr "مثال على الرابط"
+
+#, python-brace-format
+msgid "Failed to create flow: {0}"
+msgstr "فشل إنشاء التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to delete flow: {0}"
+msgstr "فشل حذف التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to deprecate flow: {0}"
+msgstr "فشل إيقاف التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to fetch flows: {0}"
+msgstr "فشل جلب التدفقات: {0}"
+
+#, python-brace-format
+msgid "Failed to get flow status: {0}"
+msgstr "فشل الحصول على حالة التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to get preview: {0}"
+msgstr "فشل الحصول على المعاينة: {0}"
+
+#, python-brace-format
+msgid "Failed to import flow: {0}"
+msgstr "فشل استيراد التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to publish flow: {0}"
+msgstr "فشل نشر التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to subscribe app to webhooks: {0}"
+msgstr "فشل اشتراك التطبيق في Webhooks: {0}"
+
+#, python-brace-format
+msgid "Failed to sync flow: {0}"
+msgstr "فشل مزامنة التدفق: {0}"
+
+#, python-brace-format
+msgid "Failed to sync flows: {0}"
+msgstr "فشل مزامنة التدفقات: {0}"
+
+msgid "Failed to trigger notifications"
+msgstr "فشل تشغيل الإشعارات"
+
+#, python-brace-format
+msgid "Failed to upload flow JSON: {0}"
+msgstr "فشل رفع ملف JSON للتدفق: {0}"
+
+msgid "Fetch Flows"
+msgstr "جلب التدفقات"
+
+msgid "Fetching flows from Meta..."
+msgstr "جارٍ جلب التدفقات من Meta..."
+
+msgid "Field name"
+msgstr "اسم الحقل"
+
+msgid "Field name containing the mobile number"
+msgstr "اسم الحقل الذي يحتوي على رقم الجوال"
+
+msgid "Field name containing the recipient name (optional)"
+msgstr "اسم الحقل الذي يحتوي على اسم المستلم (اختياري)"
+
+#, python-brace-format
+msgid "Field name {0} does not exists"
+msgstr "اسم الحقل {0} غير موجود"
+
+msgid "Field names"
+msgstr "أسماء الحقول"
+
+msgid "Field names to replace the value in templates"
+msgstr "أسماء الحقول التي تُستبدل قيمها في القوالب"
+
+#, python-brace-format
+msgid "Field {0} not found on DocType {1}"
+msgstr "الحقل {0} غير موجود في نوع المستند {1}"
+
+msgid "File name"
+msgstr "اسم الملف"
+
+msgid "Filters"
+msgstr "عوامل التصفية"
+
+msgid "Flow"
+msgstr "التدفق"
+
+msgid "Flow CTA"
+msgstr "زر التدفق (CTA)"
+
+msgid "Flow ID"
+msgstr "Flow ID"
+
+msgid "Flow ID from WhatsApp API (auto-generated after creation)"
+msgstr "Flow ID من واجهة واتساب API (يُنشأ تلقائيًا بعد الإنشاء)"
+
+msgid "Flow ID is required to sync"
+msgstr "Flow ID مطلوب للمزامنة"
+
+msgid "Flow JSON"
+msgstr "Flow JSON"
+
+msgid "Flow JSON Version"
+msgstr "إصدار Flow JSON"
+
+msgid "Flow JSON uploaded successfully"
+msgstr "تم رفع ملف JSON للتدفق بنجاح"
+
+msgid "Flow Name"
+msgstr "اسم التدفق"
+
+msgid "Flow Response"
+msgstr "استجابة التدفق"
+
+msgid "Flow Response Data"
+msgstr "بيانات استجابة التدفق"
+
+msgid "Flow Screen"
+msgstr "شاشة التدفق"
+
+msgid "Flow Settings"
+msgstr "إعدادات التدفق"
+
+msgid "Flow Status"
+msgstr "حالة التدفق"
+
+#, python-brace-format
+msgid ""
+"Flow Status: {0}\n"
+"JSON Version: {1}"
+msgstr ""
+"حالة التدفق: {0}\n"
+"إصدار JSON: {1}"
+
+msgid "Flow Token"
+msgstr "رمز التدفق (Token)"
+
+#, python-brace-format
+msgid ""
+"Flow Validation Errors:\n"
+"{0}"
+msgstr ""
+"أخطاء التحقق من التدفق:\n"
+"{0}"
+
+msgid "Flow already exists on WhatsApp. Use update instead."
+msgstr "التدفق موجود مسبقًا على واتساب. استخدم التحديث بدلًا من ذلك."
+
+#, python-brace-format
+msgid "Flow already exists: {0}"
+msgstr "التدفق موجود مسبقًا: {0}"
+
+msgid "Flow created successfully on WhatsApp"
+msgstr "تم إنشاء التدفق بنجاح على واتساب"
+
+msgid "Flow deleted from WhatsApp"
+msgstr "تم حذف التدفق من واتساب"
+
+msgid "Flow deprecated successfully"
+msgstr "تم إيقاف التدفق بنجاح"
+
+msgid "Flow does not exist on WhatsApp"
+msgstr "التدفق غير موجود على واتساب"
+
+#, python-brace-format
+msgid "Flow imported successfully: {0}"
+msgstr "تم استيراد التدفق بنجاح: {0}"
+
+msgid "Flow is already published"
+msgstr "التدفق منشور مسبقًا"
+
+msgid "Flow must be created on WhatsApp before sending"
+msgstr "يجب إنشاء التدفق على واتساب قبل الإرسال"
+
+msgid "Flow must be created on WhatsApp first"
+msgstr "يجب إنشاء التدفق على واتساب أولًا"
+
+msgid "Flow published successfully"
+msgstr "تم نشر التدفق بنجاح"
+
+msgid "Flow synced successfully from WhatsApp"
+msgstr "تمت مزامنة التدفق بنجاح من واتساب"
+
+msgid "Footer"
+msgstr "التذييل"
+
+msgid "For V16 use UTILITY and AUTHENTICATION in place of TRANSACTIONAL and OTP"
+msgstr "في الإصدار V16 استخدم UTILITY و AUTHENTICATION بدلًا من TRANSACTIONAL و OTP"
+
+msgid "For dynamic data flows that require server interaction"
+msgstr "للتدفقات ذات البيانات الديناميكية التي تتطلب تفاعلًا مع الخادم"
+
+msgid "From WhatsApp Number"
+msgstr "من رقم واتساب"
+
+msgid "Generated Flow JSON"
+msgstr "Flow JSON المُنشأ"
+
+msgid "Get Alerts for Today"
+msgstr "الحصول على تنبيهات اليوم"
+
+msgid "Get Preview URL"
+msgstr "الحصول على رابط المعاينة"
+
+msgid "Getting preview URL..."
+msgstr "جارٍ الحصول على رابط المعاينة..."
+
+msgid "Header"
+msgstr "الترويسة"
+
+msgid "Header Type"
+msgstr "نوع الترويسة"
+
+msgid "Helper Text"
+msgstr "النص المساعد"
+
+msgid "Hourly"
+msgstr "كل ساعة"
+
+msgid "Hourly Long"
+msgstr "كل ساعة (طويل)"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IMAGE"
+msgstr "IMAGE"
+
+msgid "Import Flow from Meta"
+msgstr "استيراد تدفق من Meta"
+
+msgid "Import From DocType"
+msgstr "استيراد من نوع المستند"
+
+msgid "Import Limit"
+msgstr "حد الاستيراد"
+
+msgid "Import Recipients"
+msgstr "استيراد المستلمين"
+
+msgid "Import from Meta"
+msgstr "استيراد من Meta"
+
+#, python-brace-format
+msgid "Imported: {0}<br>Updated: {1}<br>Skipped: {2}"
+msgstr "تم الاستيراد: {0}<br>تم التحديث: {1}<br>تم التخطي: {2}"
+
+msgid "Importing flow..."
+msgstr "جارٍ استيراد التدفق..."
+
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+msgid "Individual"
+msgstr "فردي"
+
+msgid "Initial Value"
+msgstr "القيمة الأولية"
+
+msgid "Invalid JSON in Filters field"
+msgstr "صيغة JSON غير صالحة في حقل عوامل التصفية"
+
+msgid "Invalid JSON in Recipient Data field"
+msgstr "صيغة JSON غير صالحة في حقل بيانات المستلم"
+
+msgid "Is Default Incoming"
+msgstr "الوارد الافتراضي"
+
+msgid "Is Default Outgoing"
+msgstr "الصادر الافتراضي"
+
+msgid "Is Reply"
+msgstr "رد"
+
+#, python-brace-format
+msgid "JSON array of options: [{\"id\": \"opt1\", \"title\": \"Option 1\"}, ...]"
+msgstr "مصفوفة JSON للخيارات: [{\"id\": \"opt1\", \"title\": \"Option 1\"}, ...]"
+
+#, python-brace-format
+msgid ""
+"JSON array: [{\"id\": \"yes\", \"title\": \"Yes\"}, {\"id\": \"no\", "
+"\"title\": \"No\"}]"
+msgstr ""
+"مصفوفة JSON: [{\"id\": \"yes\", \"title\": \"Yes\"}, {\"id\": \"no\", "
+"\"title\": \"No\"}]"
+
+msgid "JSON fields to apply when importing (optional) [\"full_name\", \"email\"]"
+msgstr "حقول JSON المطبقة عند الاستيراد (اختياري) [\"full_name\", \"email\"]"
+
+#, python-brace-format
+msgid ""
+"JSON filters to apply when importing (optional) Ex: {\"email\": "
+"\"admin@example.com\"}"
+msgstr ""
+"عوامل تصفية JSON المطبقة عند الاستيراد (اختياري) مثال: {\"email\": "
+"\"admin@example.com\"}"
+
+msgid "JSON formatted data for message variables"
+msgstr "بيانات بتنسيق JSON لمتغيرات الرسالة"
+
+msgid "LEAD_GENERATION"
+msgstr "LEAD_GENERATION"
+
+msgid "Label"
+msgstr "التسمية"
+
+msgid "Language Code"
+msgstr "رمز اللغة"
+
+msgid "Layout Type"
+msgstr "نوع التخطيط"
+
+msgid "Leave empty to send immediately after submission"
+msgstr "اتركه فارغًا للإرسال مباشرةً بعد الاعتماد"
+
+msgid "List Name"
+msgstr "اسم القائمة"
+
+msgid "Local Status"
+msgstr "الحالة المحلية"
+
+msgid "MARKETING"
+msgstr "MARKETING"
+
+msgid "MPM Header"
+msgstr "ترويسة MPM"
+
+msgid "Make sure that Template variables are same as Recipient data fields"
+msgstr "تأكد من تطابق متغيرات القالب مع حقول بيانات المستلم"
+
+msgid "Mark as read"
+msgstr "تحديد كمقروءة"
+
+msgid "Mark this as the final screen that completes the flow"
+msgstr "حدد هذه الشاشة كشاشة نهائية تُكمل التدفق"
+
+msgid "Marked as read"
+msgstr "تم التحديد كمقروءة"
+
+msgid "Max Characters"
+msgstr "الحد الأقصى للأحرف"
+
+msgid "Maximum number of records to import (optional)"
+msgstr "الحد الأقصى لعدد السجلات المراد استيرادها (اختياري)"
+
+msgid "Message ID"
+msgstr "Message ID"
+
+msgid "Message Progress"
+msgstr "تقدم الرسائل"
+
+msgid "Message content is required"
+msgstr "محتوى الرسالة مطلوب"
+
+msgid "Message to show when flow is completed"
+msgstr "الرسالة التي تظهر عند اكتمال التدفق"
+
+msgid "Meta Data"
+msgstr "البيانات الوصفية"
+
+msgid "Min Characters"
+msgstr "الحد الأدنى للأحرف"
+
+msgid "Mobile Number"
+msgstr "رقم الجوال"
+
+msgid "Mobile Number Field"
+msgstr "حقل رقم الجوال"
+
+msgid "Mobile Number is required"
+msgstr "رقم الجوال مطلوب"
+
+msgid "Mobile number field"
+msgstr "حقل رقم الجوال"
+
+msgid "Mobile number with country code"
+msgstr "رقم الجوال مع رمز الدولة"
+
+msgid "Monthly"
+msgstr "شهري"
+
+msgid "Monthly Long"
+msgstr "شهري (طويل)"
+
+msgid "Multi-Product Message"
+msgstr "رسالة متعددة المنتجات"
+
+msgid "Name Field"
+msgstr "حقل الاسم"
+
+msgid "New Order Received via WhatsApp"
+msgstr "تم استلام طلب جديد عبر واتساب"
+
+msgid "No alerts for today"
+msgstr "لا توجد تنبيهات لليوم"
+
+msgid "No data received"
+msgstr "لم يتم استلام أي بيانات"
+
+msgid "No flows found on Meta Business Account"
+msgstr "لم يتم العثور على تدفقات في حساب Meta للأعمال"
+
+msgid "Note: Only the first 30 products were included due to WhatsApp limitations."
+msgstr "ملاحظة: تم تضمين أول 30 منتجًا فقط بسبب قيود واتساب."
+
+msgid "Notification Name"
+msgstr "اسم الإشعار"
+
+msgid "Notification Type"
+msgstr "نوع الإشعار"
+
+msgid "OTHER"
+msgstr "OTHER"
+
+msgid "OTP"
+msgstr "OTP"
+
+msgid "OptIn"
+msgstr "OptIn"
+
+msgid "Optional token for flow authentication"
+msgstr "رمز اختياري لمصادقة التدفق"
+
+msgid "Partially Failed"
+msgstr "فشل جزئيًا"
+
+msgid "Phone ID"
+msgstr "Phone ID"
+
+msgid "Please add at least one recipient"
+msgstr "يرجى إضافة مستلم واحد على الأقل"
+
+msgid "Please enter message content"
+msgstr "يرجى إدخال محتوى الرسالة"
+
+msgid "Please select a DocType and Mobile Field before importing"
+msgstr "يرجى اختيار نوع المستند وحقل الجوال قبل الاستيراد"
+
+msgid "Please select a recipient list"
+msgstr "يرجى اختيار قائمة مستلمين"
+
+msgid "Please select a template"
+msgstr "يرجى اختيار قالب"
+
+msgid "Please set a default outgoing WhatsApp Account"
+msgstr "يرجى تعيين حساب واتساب افتراضي للرسائل الصادرة"
+
+msgid ""
+"Please set a default outgoing WhatsApp Account or Select available WhatsApp "
+"Account"
+msgstr "يرجى تعيين حساب واتساب افتراضي للرسائل الصادرة أو اختيار حساب واتساب متاح"
+
+msgid "Preview URL"
+msgstr "رابط المعاينة"
+
+msgid "Preview URL not available"
+msgstr "رابط المعاينة غير متاح"
+
+msgid "Product Catalog"
+msgstr "كتالوج المنتجات"
+
+msgid "Product IDs"
+msgstr "معرّفات المنتجات"
+
+msgid "Profile Name"
+msgstr "اسم ملف التعريف"
+
+msgid "Provide any of your products id to use its image."
+msgstr "أدخل معرّف أي منتج من منتجاتك لاستخدام صورته."
+
+msgid "Published"
+msgstr "المنشور"
+
+msgid "Publishing flow..."
+msgstr "جارٍ نشر التدفق..."
+
+msgid "Queued"
+msgstr "في الانتظار"
+
+msgid "Quick Reply"
+msgstr "رد سريع"
+
+msgid "RadioButtonsGroup"
+msgstr "RadioButtonsGroup"
+
+msgid "Recipient Count"
+msgstr "عدد المستلمين"
+
+msgid "Recipient Data"
+msgstr "بيانات المستلم"
+
+msgid "Recipient Data (JSON)"
+msgstr "بيانات المستلم (JSON)"
+
+msgid "Recipient List"
+msgstr "قائمة المستلمين"
+
+msgid "Recipient Name"
+msgstr "اسم المستلم"
+
+msgid "Recipient Type"
+msgstr "نوع المستلم"
+
+msgid "Recipients"
+msgstr "المستلمون"
+
+msgid "Reference Date"
+msgstr "التاريخ المرجعي"
+
+msgid "Reference DocType"
+msgstr "نوع المستند المرجعي"
+
+msgid "Reference Document Type"
+msgstr "نوع المستند المرجعي"
+
+msgid "Reference name"
+msgstr "الاسم المرجعي"
+
+msgid "Refresh on Back"
+msgstr "التحديث عند الرجوع"
+
+msgid "Refresh screen data when user navigates back"
+msgstr "تحديث بيانات الشاشة عند رجوع المستخدم إليها"
+
+msgid "Reply To Message ID"
+msgstr "معرّف الرسالة المردود عليها"
+
+msgid "Required"
+msgstr "مطلوب"
+
+msgid "Retry Failed Messages"
+msgstr "إعادة إرسال الرسائل الفاشلة"
+
+msgid "SIGN_IN"
+msgstr "SIGN_IN"
+
+msgid "SIGN_UP"
+msgstr "SIGN_UP"
+
+msgid "SURVEY"
+msgstr "SURVEY"
+
+msgid "Sample"
+msgstr "نموذج"
+
+msgid "Sample Values"
+msgstr "قيم نموذجية"
+
+msgid "Save form before importing"
+msgstr "احفظ النموذج قبل الاستيراد"
+
+msgid "Scheduled"
+msgstr "مجدول"
+
+msgid "Scheduled Time"
+msgstr "وقت الجدولة"
+
+msgid "Scheduled time must be in the future"
+msgstr "يجب أن يكون وقت الجدولة في المستقبل"
+
+msgid "Screen Fields"
+msgstr "حقول الشاشة"
+
+msgid "Screen ID"
+msgstr "Screen ID"
+
+msgid "Screen ID this field belongs to"
+msgstr "Screen ID الذي ينتمي إليه هذا الحقل"
+
+msgid "Screen Title"
+msgstr "عنوان الشاشة"
+
+msgid "Screens"
+msgstr "الشاشات"
+
+msgid "Script Manager"
+msgstr "مدير البرامج النصية"
+
+msgid "Select Flow to Import"
+msgstr "اختر التدفق المراد استيراده"
+
+msgid "Selected recipient list has no recipients"
+msgstr "قائمة المستلمين المحددة لا تحتوي على مستلمين"
+
+msgid "Send Test"
+msgstr "إرسال تجريبي"
+
+msgid "Send Test Flow"
+msgstr "إرسال تدفق تجريبي"
+
+msgid "Send To Whatsapp"
+msgstr "إرسال إلى واتساب"
+
+msgid "Send days before or after the reference date"
+msgstr "الإرسال قبل التاريخ المرجعي أو بعده بعدد من الأيام"
+
+msgid "Sending flow in draft mode (for testing only)"
+msgstr "إرسال التدفق في وضع المسودة (للاختبار فقط)"
+
+msgid "Sending test flow..."
+msgstr "جارٍ إرسال التدفق التجريبي..."
+
+msgid "Sent Count"
+msgstr "عدد المرسَل"
+
+msgid "Set Property After Alert"
+msgstr "تعيين خاصية بعد التنبيه"
+
+msgid "SingleColumnLayout"
+msgstr "SingleColumnLayout"
+
+msgid "Starting screen ID (optional)"
+msgstr "Screen ID لشاشة البداية (اختياري)"
+
+msgid "Static"
+msgstr "ثابت"
+
+msgid "Subscribe App to Webhooks"
+msgstr "اشتراك التطبيق في Webhooks"
+
+#, python-brace-format
+msgid "Subscribe this app to webhooks for WhatsApp Business Account {0}?"
+msgstr "هل تريد اشتراك هذا التطبيق في Webhooks لحساب واتساب للأعمال {0}؟"
+
+msgid "Subscribing app to webhooks..."
+msgstr "جارٍ اشتراك التطبيق في Webhooks..."
+
+#, python-brace-format
+msgid "Subscription was not successful: {0}"
+msgstr "لم ينجح الاشتراك: {0}"
+
+msgid "Success Message"
+msgstr "رسالة النجاح"
+
+msgid "Successfully Sent to: "
+msgstr "تم الإرسال بنجاح إلى: "
+
+msgid "Sync All"
+msgstr "مزامنة الكل"
+
+msgid "Sync Complete"
+msgstr "اكتملت المزامنة"
+
+msgid "Sync Flows from Meta"
+msgstr "مزامنة التدفقات من Meta"
+
+msgid "Sync from Meta"
+msgstr "مزامنة من Meta"
+
+msgid "Syncing all flows from Meta..."
+msgstr "جارٍ مزامنة جميع التدفقات من Meta..."
+
+msgid "Syncing flow from Meta..."
+msgstr "جارٍ مزامنة التدفق من Meta..."
+
+msgid "Syncing templates from Meta..."
+msgstr "جارٍ مزامنة القوالب من Meta..."
+
+msgid "TEXT"
+msgstr "TEXT"
+
+msgid "TO "
+msgstr "إلى "
+
+msgid "TRANSACTIONAL"
+msgstr "TRANSACTIONAL"
+
+msgid "Template Header Parameters"
+msgstr "معاملات ترويسة القالب"
+
+msgid "Template Label"
+msgstr "تسمية القالب"
+
+msgid "Template Name"
+msgstr "اسم القالب"
+
+msgid "Template Parameters"
+msgstr "معاملات القالب"
+
+msgid "Template Variables"
+msgstr "متغيرات القالب"
+
+msgid "Terminal Screen"
+msgstr "الشاشة النهائية"
+
+#, python-brace-format
+msgid "Test flow sent to {0}"
+msgstr "تم إرسال التدفق التجريبي إلى {0}"
+
+msgid "Test recipient added"
+msgstr "تمت إضافة المستلم التجريبي"
+
+msgid "TextArea"
+msgstr "TextArea"
+
+msgid "TextBody"
+msgstr "TextBody"
+
+msgid "TextCaption"
+msgstr "TextCaption"
+
+msgid "TextHeading"
+msgstr "TextHeading"
+
+msgid "TextInput"
+msgstr "TextInput"
+
+msgid "TextSubheading"
+msgstr "TextSubheading"
+
+msgid "The text that appears at the very top of the multi-product message."
+msgstr "النص الذي يظهر في أعلى الرسالة متعددة المنتجات."
+
+#, python-brace-format
+msgid "This message is scheduled to be sent on {0}"
+msgstr "هذه الرسالة مجدولة للإرسال في {0}"
+
+msgid "Throttled"
+msgstr "مقيّد"
+
+msgid "Thumbnail Product"
+msgstr "المنتج المصغّر"
+
+msgid ""
+"Tip: You can use \"Custom\" when you don’t want a default frequency, but you"
+" must set up the custom schedule manually after selecting this option."
+msgstr ""
+"تلميح: يمكنك استخدام \"مخصص\" عندما لا تريد تكرارًا افتراضيًا، ولكن يجب "
+"إعداد الجدول المخصص يدويًا بعد اختيار هذا الخيار."
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Token"
+msgstr "الرمز"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL Type"
+msgstr "نوع الرابط"
+
+msgid "UTILITY"
+msgstr "UTILITY"
+
+msgid "Unique"
+msgstr "فريد"
+
+msgid "Upload Flow JSON"
+msgstr "رفع Flow JSON"
+
+msgid "Upload the file as public. Whatsapp cannot access the private file."
+msgstr "ارفع الملف كملف عام، إذ لا يمكن لواتساب الوصول إلى الملفات الخاصة."
+
+msgid "Uploading flow JSON..."
+msgstr "جارٍ رفع Flow JSON..."
+
+msgid "Use Template"
+msgstr "استخدام قالب"
+
+msgid "Validate Recipients"
+msgstr "التحقق من المستلمين"
+
+msgid "Validation"
+msgstr "التحقق"
+
+msgid "Validation Errors"
+msgstr "أخطاء التحقق"
+
+msgid "Validation Results"
+msgstr "نتائج التحقق"
+
+msgid "Value To Be Set"
+msgstr "القيمة المراد تعيينها"
+
+msgid "Variable Type"
+msgstr "نوع المتغير"
+
+msgid "Visit Website"
+msgstr "زيارة الموقع"
+
+msgid "Webhook Verify Token"
+msgstr "Webhook Verify Token"
+
+msgid "Website URL"
+msgstr "رابط الموقع الإلكتروني"
+
+msgid "Weekly"
+msgstr "أسبوعي"
+
+msgid "Weekly Long"
+msgstr "أسبوعي (طويل)"
+
+msgid "WhatsApp Account"
+msgstr "حساب واتساب"
+
+msgid "WhatsApp Button"
+msgstr "زر واتساب"
+
+msgid "WhatsApp Flow"
+msgstr "تدفق واتساب"
+
+msgid "WhatsApp Flow Field"
+msgstr "حقل تدفق واتساب"
+
+msgid "WhatsApp Flow Screen"
+msgstr "شاشة تدفق واتساب"
+
+msgid "WhatsApp Flow is required for flow content type"
+msgstr "تدفق واتساب مطلوب عند اختيار نوع المحتوى تدفق"
+
+msgid "WhatsApp Manager"
+msgstr "مدير واتساب"
+
+msgid "WhatsApp Message"
+msgstr "رسالة واتساب"
+
+msgid "WhatsApp Message Fields"
+msgstr "حقول رسالة واتساب"
+
+msgid "WhatsApp Notification"
+msgstr "إشعار واتساب"
+
+msgid "WhatsApp Notification Log"
+msgstr "سجل إشعارات واتساب"
+
+msgid "WhatsApp Profiles"
+msgstr "ملفات واتساب الشخصية"
+
+msgid "WhatsApp Recipient"
+msgstr "مستلم واتساب"
+
+msgid "WhatsApp Recipient List"
+msgstr "قائمة مستلمي واتساب"
+
+msgid "WhatsApp Settings"
+msgstr "إعدادات واتساب"
+
+msgid "WhatsApp Template requires a document. "
+msgstr "قالب واتساب يتطلب مستندًا. "
+
+msgid "WhatsApp Template requires document"
+msgstr "قالب واتساب يتطلب مستندًا"
+
+msgid "WhatsApp Templates"
+msgstr "قوالب واتساب"
+
+msgid "Whatsapp Account"
+msgstr "حساب واتساب"
+
+msgid "Yearly"
+msgstr "سنوي"
+
+msgid "audio"
+msgstr "صوت"
+
+msgid "bulk_message_reference"
+msgstr "bulk_message_reference"
+
+msgid "button"
+msgstr "زر"
+
+msgid "contact"
+msgstr "جهة اتصال"
+
+msgid "document"
+msgstr "مستند"
+
+msgid "fields to replace button variables, separated by comma"
+msgstr "الحقول التي تستبدل متغيرات الزر، مفصولة بفاصلة"
+
+msgid "flow"
+msgstr "تدفق"
+
+msgid "image"
+msgstr "صورة"
+
+msgid "interactive"
+msgstr "تفاعلي"
+
+msgid "location"
+msgstr "موقع"
+
+msgid "order"
+msgstr "طلب"
+
+msgid "reaction"
+msgstr "تفاعل"
+
+msgid "text"
+msgstr "نص"
+
+msgid "video"
+msgstr "فيديو"
+
+#, python-brace-format
+msgid "{0} is required to subscribe the app"
+msgstr "{0} مطلوب لاشتراك التطبيق"
+
+#, python-brace-format
+msgid "{0} message(s) requeued for sending"
+msgstr "تمت إعادة {0} رسالة إلى قائمة انتظار الإرسال"
+
